@@ -1,0 +1,64 @@
+{%extends "layout.html"%}
+{%block content%}
+		<section class=" container vh-100 vw-100">
+		  <div class="container py-5">
+		    <div class="row">
+		      <div class="col-lg-4">
+		        <div class="card mb-4">
+		          <div class="card-body text-center">
+		            <img src="{{image_file}}" alt="avatar"
+		              class="rounded-circle img-fluid" style="width: 150px;">
+		            <h5 class="my-3">{{user.username}}</h5>
+		            <p class="text-muted mb-1">{{user.location}}</p>
+		            <p class="text-muted mb-3">{{user.email}}</p>
+		          </div>
+
+		        </div>
+		      </div>
+		      <div class="col-lg-8">
+		        <div class="card mb-4">
+		          <div class="card-body">
+		            <div class="row">
+		              <div class="col-sm-3">
+		                <p class="mb-0">Full Name</p>
+		              </div>
+		              <div class="d-flex flex-row align-items-center">
+	                  	<p class="text-muted mb-0">{{user.username}}</p>
+	                  </div>
+		            </div>
+		            <hr>
+		            <div class="row">
+		              <div class="col-sm-3">
+		                <p class="mb-0">Email</p>
+		              </div>
+		              <div class="d-flex flex-row align-items-center">
+	                    <p class="text-muted mb-0">{{user.email}}</p>
+	                  </div>
+		            </div>
+		            <hr>
+		            <div class="row">
+		              <div class="col-sm-3">
+		                <p class="mb-0">Phone</p>
+		              </div>
+		              <div class="d-flex flex-row align-items-center">
+	                    <p class="text-muted mb-0">{{user.phone}}</p>
+	                  </div>
+		            </div>
+		            <hr>
+		            <div class="row">
+		              <div class="col-sm-3">
+		                <p class="mb-0">Address</p>
+		              </div>
+		              <div class="d-flex flex-row align-items-center">
+				          <p class="text-muted mb-0">{{user.location}}</p>          
+	              		</div>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="content-section">
+					<legend class="border-bottom mb-4">{{user.username}}'s Information</legend>
+					<p class="text-muted mb-0">{{user.content}}</p>
+				</div>
+		</section>
+
+{%endblock%}
